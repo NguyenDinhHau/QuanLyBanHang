@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_thoat = new System.Windows.Forms.Button();
             this.txt_tk_xoa = new System.Windows.Forms.Button();
             this.txt_tk_timKiem = new System.Windows.Forms.Button();
             this.txt_tk_size = new System.Windows.Forms.TextBox();
@@ -44,10 +46,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btn_thoat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -55,6 +54,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.PeachPuff;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_thoat);
             this.groupBox1.Controls.Add(this.txt_tk_xoa);
             this.groupBox1.Controls.Add(this.txt_tk_timKiem);
@@ -66,6 +67,26 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tác Vụ";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(385, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 35);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Xuất Hàng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_thoat
+            // 
+            this.btn_thoat.Location = new System.Drawing.Point(825, 29);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(116, 30);
+            this.btn_thoat.TabIndex = 4;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // txt_tk_xoa
             // 
@@ -79,17 +100,19 @@
             // 
             // txt_tk_timKiem
             // 
-            this.txt_tk_timKiem.Location = new System.Drawing.Point(451, 29);
+            this.txt_tk_timKiem.BackColor = System.Drawing.Color.Silver;
+            this.txt_tk_timKiem.Location = new System.Drawing.Point(280, 32);
             this.txt_tk_timKiem.Name = "txt_tk_timKiem";
-            this.txt_tk_timKiem.Size = new System.Drawing.Size(117, 30);
+            this.txt_tk_timKiem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_tk_timKiem.Size = new System.Drawing.Size(73, 30);
             this.txt_tk_timKiem.TabIndex = 2;
             this.txt_tk_timKiem.Text = "Tìm Kiếm";
-            this.txt_tk_timKiem.UseVisualStyleBackColor = true;
+            this.txt_tk_timKiem.UseVisualStyleBackColor = false;
             this.txt_tk_timKiem.Click += new System.EventHandler(this.txt_tk_timKiem_Click);
             // 
             // txt_tk_size
             // 
-            this.txt_tk_size.Location = new System.Drawing.Point(212, 28);
+            this.txt_tk_size.Location = new System.Drawing.Point(79, 29);
             this.txt_tk_size.Multiline = true;
             this.txt_tk_size.Name = "txt_tk_size";
             this.txt_tk_size.Size = new System.Drawing.Size(181, 35);
@@ -98,7 +121,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(122, 38);
+            this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 0;
@@ -124,9 +147,7 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
+            this.columnHeader8});
             this.lsv_tiemKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsv_tiemKiem.FullRowSelect = true;
             this.lsv_tiemKiem.GridLines = true;
@@ -147,27 +168,27 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Hãng Giày";
-            this.columnHeader2.Width = 108;
+            this.columnHeader2.Width = 161;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Tên Giày";
+            this.columnHeader3.Text = "Model";
             this.columnHeader3.Width = 107;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Màu Giày";
-            this.columnHeader4.Width = 99;
+            this.columnHeader4.Width = 112;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Size";
-            this.columnHeader5.Width = 52;
+            this.columnHeader5.Width = 106;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Thể Loại";
-            this.columnHeader6.Width = 100;
+            this.columnHeader6.Text = "Ghi Chú";
+            this.columnHeader6.Width = 240;
             // 
             // columnHeader7
             // 
@@ -177,39 +198,21 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "Giá Bán";
-            this.columnHeader8.Width = 116;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Ngày Bán";
-            this.columnHeader9.Width = 113;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Người Bán";
-            this.columnHeader10.Width = 179;
+            this.columnHeader8.Width = 131;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // btn_thoat
-            // 
-            this.btn_thoat.Location = new System.Drawing.Point(825, 29);
-            this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Size = new System.Drawing.Size(116, 30);
-            this.btn_thoat.TabIndex = 4;
-            this.btn_thoat.Text = "Thoát";
-            this.btn_thoat.UseVisualStyleBackColor = true;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
-            // 
             // fm_timKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1008, 582);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "fm_timKiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tìm Kiếm";
@@ -239,9 +242,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btn_thoat;
+        private System.Windows.Forms.Button button1;
     }
 }

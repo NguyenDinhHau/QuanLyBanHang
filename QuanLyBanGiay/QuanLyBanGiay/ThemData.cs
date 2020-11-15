@@ -31,7 +31,7 @@ namespace QuanLyBanGiay
         {
             Close();
         }
-        string file_data = @"D:\c#\WinForm\QuanLyGiay\HangGiay.txt";
+        string file_data = @"D:\c#\form\QuanLyBanGiay\HangGiay.txt";
         SqlConnection conn = null;
         string strSql = "Server = DESKTOP-KJ1U6CT;Database = CSDL_QLBG; user id = sa; pwd = Hoa95@100";
         public void connect_data()
@@ -50,7 +50,7 @@ namespace QuanLyBanGiay
             connect_data();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select count(*) from BanGiay";
+            command.CommandText = "select count(*) from DataGiay";
             command.Connection = conn;
             object v = command.ExecuteScalar();
             stt = (int)v;
@@ -94,19 +94,17 @@ namespace QuanLyBanGiay
 
         private void btn_luuDuLieu_Click(object sender, EventArgs e)
         {
-            if(txt_tenGiay.Text == "" || txt_mauGiay.Text == "" ||txt_loaiGiay.Text == ""||txt_size.Text == "" || txt_giaBan.Text == ""|| txt_giaBan.Text == ""||txt_nguoiBan.Text == "")
+            if(txt_tenGiay.Text == "" || txt_mauGiay.Text == "" ||txt_loaiGiay.Text == ""||txt_size.Text == "" || txt_giaBan.Text == "")
             {
                 errorProvider1.SetError(btn_luuDuLieu, "Bạn cần nhập đầy đủ thông tin");
             }    
             else
             {
-                stt += 1;
-                DateTime date = dateTimePicker1.Value;
                 connect_data();
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.CommandType = CommandType.Text;
-                string sql_insert = "Insert into BanGiay(Stt,HangGiay,TenGiay,MauGiay,Size,LoaiGiay,ViTri,GiaBan,Hinh1,Hinh2,Hinh3,NgayBan,NguoiBan)" +
-                    "values (" + stt + ",N'" + cmb_hangGiay.Text + "',N'" + txt_tenGiay.Text + "',N'" + txt_mauGiay.Text + "',N'" + txt_size.Text + "',N'" + txt_loaiGiay.Text + "',N'" + txt_viTri.Text + "',N'" + txt_giaBan.Text + "',N'" + hinh_1 + "',N'" + hinh_2 + "',N'" + hinh_3 + "',N'" + date + "',N'" + txt_nguoiBan.Text + "')";
+                string sql_insert = "Insert into DataGiay(HangGiay,Model,MauGiay,Size,GhiChu,ViTri,GiaBan,Hinh1,Hinh2,Hinh3)" +
+                    "values (N'" + cmb_hangGiay.Text + "',N'" + txt_tenGiay.Text + "',N'" + txt_mauGiay.Text + "',N'" + txt_size.Text + "',N'" + txt_loaiGiay.Text + "',N'" + txt_viTri.Text + "',N'" + txt_giaBan.Text + "',N'" + hinh_1 + "',N'" + hinh_2 + "',N'" + hinh_3 + "')";
                 sqlCommand.CommandText = sql_insert;
                 sqlCommand.Connection = conn;
 

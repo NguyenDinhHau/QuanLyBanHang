@@ -19,7 +19,7 @@ namespace QuanLyBanGiay
             InitializeComponent();
             stt_data = stt;
         }
-        string file_data = @"D:\c#\WinForm\QuanLyGiay\HangGiay.txt";
+        string file_data = @"D:\c#\form\QuanLyBanGiay\HangGiay.txt";
         string hinh_1 = null;
         string hinh_2 = null;
         string hinh_3 = null;
@@ -46,7 +46,7 @@ namespace QuanLyBanGiay
             connect_data();
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "Select * from BanGiay where Stt = @stt";
+            command.CommandText = "Select * from DataGiay where Stt = @stt";
             command.Connection = conn;
             SqlParameter parma = new SqlParameter("@stt", SqlDbType.Int);
             parma.Value = stt_data+"";
@@ -57,19 +57,17 @@ namespace QuanLyBanGiay
             {
                 cmb_ud_hangGiay.Text = reader.GetString(1);
                 txt_ud_tenGiay.Text = reader.GetString(2);
-                txt_ud_mauGiay.Text = reader.GetString(3);
-                txt_ud_size.Text = reader.GetString(4);
-                txt_ud_loaiGiay.Text = reader.GetString(5);
-                txt_ud_viTri.Text = reader.GetString(6);
-                dateTime_ud.Value = reader.GetDateTime(8);
-                txt_ud_giaBan.Text = reader.GetString(7);
-                txt_ud_nguoiBan.Text = reader.GetString(9);
-                ud_img_1.Image = Image.FromFile(reader.GetString(10));
-                ud_img_2.Image = Image.FromFile(reader.GetString(11));
-                ud_img_3.Image = Image.FromFile(reader.GetString(12));
-                hinh_1 = reader.GetString(10);
-                hinh_2 = reader.GetString(11);
-                hinh_3 = reader.GetString(12);
+                txt_ud_mauGiay.Text = reader.GetString(10);
+                txt_ud_size.Text = reader.GetString(3);
+                txt_ud_loaiGiay.Text = reader.GetString(4);
+                txt_ud_viTri.Text = reader.GetString(5);
+                txt_ud_giaBan.Text = reader.GetString(6);
+                ud_img_1.Image = Image.FromFile(reader.GetString(7));
+                ud_img_2.Image = Image.FromFile(reader.GetString(8));
+                ud_img_3.Image = Image.FromFile(reader.GetString(9));
+                hinh_1 = reader.GetString(7);
+                hinh_2 = reader.GetString(8);
+                hinh_3 = reader.GetString(9);
             }
             conn.Close();
         }
@@ -110,7 +108,7 @@ namespace QuanLyBanGiay
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
 
-            string sql_str = "Update BanGiay set HangGiay = N'"+ cmb_ud_hangGiay.Text +"',TenGiay = N'"+ txt_ud_tenGiay.Text+"',MauGiay = N'"+txt_ud_mauGiay.Text+"',Size = N'"+txt_ud_size.Text+"',GiaBan = N'"+txt_ud_giaBan.Text+"',NgayBan = N'"+dateTime_ud.Value+"',NguoiBan = N'"+txt_ud_nguoiBan.Text+"',Hinh1 = N'"+ hinh_1 + "',Hinh2 = N'" + hinh_2 + "',Hinh3 = N'" + hinh_3 + "' where Stt = @stt";
+            string sql_str = "Update DataGiay set HangGiay = N'" + cmb_ud_hangGiay.Text +"',Model = N'"+ txt_ud_tenGiay.Text+ "', GhiChu = N'"+ txt_ud_loaiGiay.Text+"',MauGiay = N'"+txt_ud_mauGiay.Text+"',Size = N'"+txt_ud_size.Text+"',GiaBan = N'"+txt_ud_giaBan.Text+"',Hinh1 = N'"+ hinh_1 + "',Hinh2 = N'" + hinh_2 + "',Hinh3 = N'" + hinh_3 + "' where Stt = @stt";
             command.CommandText = sql_str;
             command.Connection = conn;
 
@@ -134,6 +132,11 @@ namespace QuanLyBanGiay
         private void ud_btn_thoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

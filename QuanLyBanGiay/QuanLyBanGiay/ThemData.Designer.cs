@@ -36,33 +36,29 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_size = new System.Windows.Forms.TextBox();
+            this.txt_viTri = new System.Windows.Forms.TextBox();
+            this.txt_mauGiay = new System.Windows.Forms.TextBox();
+            this.txt_giaBan = new System.Windows.Forms.TextBox();
+            this.txt_loaiGiay = new System.Windows.Forms.TextBox();
+            this.txt_tenGiay = new System.Windows.Forms.TextBox();
             this.cmb_hangGiay = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.img_1 = new System.Windows.Forms.PictureBox();
-            this.img_2 = new System.Windows.Forms.PictureBox();
-            this.img_3 = new System.Windows.Forms.PictureBox();
-            this.btn_hinh1 = new System.Windows.Forms.Button();
-            this.btn_hinh2 = new System.Windows.Forms.Button();
             this.btn_hinh3 = new System.Windows.Forms.Button();
+            this.btn_hinh2 = new System.Windows.Forms.Button();
+            this.btn_hinh1 = new System.Windows.Forms.Button();
+            this.img_3 = new System.Windows.Forms.PictureBox();
+            this.img_2 = new System.Windows.Forms.PictureBox();
+            this.img_1 = new System.Windows.Forms.PictureBox();
             this.btn_luuDuLieu = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
-            this.txt_tenGiay = new System.Windows.Forms.TextBox();
-            this.txt_mauGiay = new System.Windows.Forms.TextBox();
-            this.txt_loaiGiay = new System.Windows.Forms.TextBox();
-            this.txt_viTri = new System.Windows.Forms.TextBox();
-            this.txt_nguoiBan = new System.Windows.Forms.TextBox();
-            this.txt_size = new System.Windows.Forms.TextBox();
-            this.txt_giaBan = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,9 +76,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Tên Giày";
+            this.label2.Text = "Model";
             // 
             // label3
             // 
@@ -105,11 +101,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(293, 97);
+            this.label5.Location = new System.Drawing.Point(492, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Loại Giày";
+            this.label5.Text = "Ghi Chú";
             // 
             // label6
             // 
@@ -123,34 +119,15 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(525, 33);
+            this.label7.Location = new System.Drawing.Point(290, 98);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "Giá Bán";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(525, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Ngày Bán";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(525, 159);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Người Bán";
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.txt_nguoiBan);
+            this.groupBox1.BackColor = System.Drawing.Color.PeachPuff;
             this.groupBox1.Controls.Add(this.txt_size);
             this.groupBox1.Controls.Add(this.txt_viTri);
             this.groupBox1.Controls.Add(this.txt_mauGiay);
@@ -159,9 +136,7 @@
             this.groupBox1.Controls.Add(this.txt_tenGiay);
             this.groupBox1.Controls.Add(this.cmb_hangGiay);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label3);
@@ -173,6 +148,54 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Giày";
+            // 
+            // txt_size
+            // 
+            this.txt_size.Location = new System.Drawing.Point(350, 24);
+            this.txt_size.Multiline = true;
+            this.txt_size.Name = "txt_size";
+            this.txt_size.Size = new System.Drawing.Size(75, 30);
+            this.txt_size.TabIndex = 5;
+            // 
+            // txt_viTri
+            // 
+            this.txt_viTri.Location = new System.Drawing.Point(350, 147);
+            this.txt_viTri.Multiline = true;
+            this.txt_viTri.Name = "txt_viTri";
+            this.txt_viTri.Size = new System.Drawing.Size(75, 30);
+            this.txt_viTri.TabIndex = 7;
+            // 
+            // txt_mauGiay
+            // 
+            this.txt_mauGiay.Location = new System.Drawing.Point(89, 147);
+            this.txt_mauGiay.Multiline = true;
+            this.txt_mauGiay.Name = "txt_mauGiay";
+            this.txt_mauGiay.Size = new System.Drawing.Size(145, 30);
+            this.txt_mauGiay.TabIndex = 4;
+            // 
+            // txt_giaBan
+            // 
+            this.txt_giaBan.Location = new System.Drawing.Point(350, 89);
+            this.txt_giaBan.Multiline = true;
+            this.txt_giaBan.Name = "txt_giaBan";
+            this.txt_giaBan.Size = new System.Drawing.Size(123, 30);
+            this.txt_giaBan.TabIndex = 6;
+            // 
+            // txt_loaiGiay
+            // 
+            this.txt_loaiGiay.Location = new System.Drawing.Point(549, 21);
+            this.txt_loaiGiay.Multiline = true;
+            this.txt_loaiGiay.Name = "txt_loaiGiay";
+            this.txt_loaiGiay.Size = new System.Drawing.Size(209, 171);
+            this.txt_loaiGiay.TabIndex = 8;
+            // 
+            // txt_tenGiay
+            // 
+            this.txt_tenGiay.Location = new System.Drawing.Point(89, 89);
+            this.txt_tenGiay.Multiline = true;
+            this.txt_tenGiay.Name = "txt_tenGiay";
+            this.txt_tenGiay.Size = new System.Drawing.Size(145, 30);
+            this.txt_tenGiay.TabIndex = 3;
             // 
             // cmb_hangGiay
             // 
@@ -197,42 +220,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hình Ảnh";
             // 
-            // img_1
+            // btn_hinh3
             // 
-            this.img_1.Location = new System.Drawing.Point(7, 20);
-            this.img_1.Name = "img_1";
-            this.img_1.Size = new System.Drawing.Size(238, 249);
-            this.img_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img_1.TabIndex = 0;
-            this.img_1.TabStop = false;
-            // 
-            // img_2
-            // 
-            this.img_2.Location = new System.Drawing.Point(264, 20);
-            this.img_2.Name = "img_2";
-            this.img_2.Size = new System.Drawing.Size(238, 249);
-            this.img_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img_2.TabIndex = 0;
-            this.img_2.TabStop = false;
-            // 
-            // img_3
-            // 
-            this.img_3.Location = new System.Drawing.Point(520, 20);
-            this.img_3.Name = "img_3";
-            this.img_3.Size = new System.Drawing.Size(238, 249);
-            this.img_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img_3.TabIndex = 0;
-            this.img_3.TabStop = false;
-            // 
-            // btn_hinh1
-            // 
-            this.btn_hinh1.Location = new System.Drawing.Point(32, 284);
-            this.btn_hinh1.Name = "btn_hinh1";
-            this.btn_hinh1.Size = new System.Drawing.Size(179, 30);
-            this.btn_hinh1.TabIndex = 0;
-            this.btn_hinh1.Text = "Hình 1";
-            this.btn_hinh1.UseVisualStyleBackColor = true;
-            this.btn_hinh1.Click += new System.EventHandler(this.btn_hinh1_Click);
+            this.btn_hinh3.Location = new System.Drawing.Point(549, 284);
+            this.btn_hinh3.Name = "btn_hinh3";
+            this.btn_hinh3.Size = new System.Drawing.Size(179, 30);
+            this.btn_hinh3.TabIndex = 2;
+            this.btn_hinh3.Text = "Hình 3";
+            this.btn_hinh3.UseVisualStyleBackColor = true;
+            this.btn_hinh3.Click += new System.EventHandler(this.btn_hinh3_Click);
             // 
             // btn_hinh2
             // 
@@ -244,15 +240,42 @@
             this.btn_hinh2.UseVisualStyleBackColor = true;
             this.btn_hinh2.Click += new System.EventHandler(this.btn_hinh2_Click);
             // 
-            // btn_hinh3
+            // btn_hinh1
             // 
-            this.btn_hinh3.Location = new System.Drawing.Point(549, 284);
-            this.btn_hinh3.Name = "btn_hinh3";
-            this.btn_hinh3.Size = new System.Drawing.Size(179, 30);
-            this.btn_hinh3.TabIndex = 2;
-            this.btn_hinh3.Text = "Hình 3";
-            this.btn_hinh3.UseVisualStyleBackColor = true;
-            this.btn_hinh3.Click += new System.EventHandler(this.btn_hinh3_Click);
+            this.btn_hinh1.Location = new System.Drawing.Point(32, 284);
+            this.btn_hinh1.Name = "btn_hinh1";
+            this.btn_hinh1.Size = new System.Drawing.Size(179, 30);
+            this.btn_hinh1.TabIndex = 0;
+            this.btn_hinh1.Text = "Hình 1";
+            this.btn_hinh1.UseVisualStyleBackColor = true;
+            this.btn_hinh1.Click += new System.EventHandler(this.btn_hinh1_Click);
+            // 
+            // img_3
+            // 
+            this.img_3.Location = new System.Drawing.Point(520, 20);
+            this.img_3.Name = "img_3";
+            this.img_3.Size = new System.Drawing.Size(238, 249);
+            this.img_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img_3.TabIndex = 0;
+            this.img_3.TabStop = false;
+            // 
+            // img_2
+            // 
+            this.img_2.Location = new System.Drawing.Point(264, 20);
+            this.img_2.Name = "img_2";
+            this.img_2.Size = new System.Drawing.Size(238, 249);
+            this.img_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img_2.TabIndex = 0;
+            this.img_2.TabStop = false;
+            // 
+            // img_1
+            // 
+            this.img_1.Location = new System.Drawing.Point(7, 20);
+            this.img_1.Name = "img_1";
+            this.img_1.Size = new System.Drawing.Size(238, 249);
+            this.img_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.img_1.TabIndex = 0;
+            this.img_1.TabStop = false;
             // 
             // btn_luuDuLieu
             // 
@@ -274,71 +297,6 @@
             this.btn_thoat.UseVisualStyleBackColor = true;
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
-            // txt_tenGiay
-            // 
-            this.txt_tenGiay.Location = new System.Drawing.Point(89, 89);
-            this.txt_tenGiay.Multiline = true;
-            this.txt_tenGiay.Name = "txt_tenGiay";
-            this.txt_tenGiay.Size = new System.Drawing.Size(145, 30);
-            this.txt_tenGiay.TabIndex = 3;
-            // 
-            // txt_mauGiay
-            // 
-            this.txt_mauGiay.Location = new System.Drawing.Point(89, 147);
-            this.txt_mauGiay.Multiline = true;
-            this.txt_mauGiay.Name = "txt_mauGiay";
-            this.txt_mauGiay.Size = new System.Drawing.Size(145, 30);
-            this.txt_mauGiay.TabIndex = 4;
-            // 
-            // txt_loaiGiay
-            // 
-            this.txt_loaiGiay.Location = new System.Drawing.Point(350, 89);
-            this.txt_loaiGiay.Multiline = true;
-            this.txt_loaiGiay.Name = "txt_loaiGiay";
-            this.txt_loaiGiay.Size = new System.Drawing.Size(135, 30);
-            this.txt_loaiGiay.TabIndex = 6;
-            // 
-            // txt_viTri
-            // 
-            this.txt_viTri.Location = new System.Drawing.Point(350, 147);
-            this.txt_viTri.Multiline = true;
-            this.txt_viTri.Name = "txt_viTri";
-            this.txt_viTri.Size = new System.Drawing.Size(75, 30);
-            this.txt_viTri.TabIndex = 7;
-            // 
-            // txt_nguoiBan
-            // 
-            this.txt_nguoiBan.Location = new System.Drawing.Point(585, 147);
-            this.txt_nguoiBan.Multiline = true;
-            this.txt_nguoiBan.Name = "txt_nguoiBan";
-            this.txt_nguoiBan.Size = new System.Drawing.Size(161, 30);
-            this.txt_nguoiBan.TabIndex = 10;
-            // 
-            // txt_size
-            // 
-            this.txt_size.Location = new System.Drawing.Point(350, 24);
-            this.txt_size.Multiline = true;
-            this.txt_size.Name = "txt_size";
-            this.txt_size.Size = new System.Drawing.Size(75, 30);
-            this.txt_size.TabIndex = 5;
-            // 
-            // txt_giaBan
-            // 
-            this.txt_giaBan.Location = new System.Drawing.Point(585, 24);
-            this.txt_giaBan.Multiline = true;
-            this.txt_giaBan.Name = "txt_giaBan";
-            this.txt_giaBan.Size = new System.Drawing.Size(123, 30);
-            this.txt_giaBan.TabIndex = 8;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(586, 89);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(122, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -347,11 +305,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 643);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_luuDuLieu);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "frm_them_data";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Dữ Liệu";
@@ -359,9 +319,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.img_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.img_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.img_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -376,8 +336,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_hinh3;
         private System.Windows.Forms.Button btn_hinh2;
@@ -390,13 +348,11 @@
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ComboBox cmb_hangGiay;
         private System.Windows.Forms.TextBox txt_tenGiay;
-        private System.Windows.Forms.TextBox txt_nguoiBan;
         private System.Windows.Forms.TextBox txt_size;
         private System.Windows.Forms.TextBox txt_viTri;
         private System.Windows.Forms.TextBox txt_mauGiay;
         private System.Windows.Forms.TextBox txt_giaBan;
         private System.Windows.Forms.TextBox txt_loaiGiay;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

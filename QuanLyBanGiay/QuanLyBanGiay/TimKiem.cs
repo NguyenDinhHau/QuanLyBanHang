@@ -40,7 +40,7 @@ namespace QuanLyBanGiay
                 connect_data();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText = "Select * from BanGiay where Size = @size";
+                command.CommandText = "Select * from DataGiay where Size = @size";
                 command.Connection = conn;
                 SqlParameter parma = new SqlParameter("@size", SqlDbType.Int);
                 parma.Value = txt_tk_size.Text;
@@ -53,13 +53,11 @@ namespace QuanLyBanGiay
                     ListViewItem item = new ListViewItem(reader.GetInt32(0) + "");
                     item.SubItems.Add(reader.GetString(1));
                     item.SubItems.Add(reader.GetString(2));
+                    item.SubItems.Add(reader.GetString(10));
                     item.SubItems.Add(reader.GetString(3));
                     item.SubItems.Add(reader.GetString(4));
                     item.SubItems.Add(reader.GetString(5));
                     item.SubItems.Add(reader.GetString(6));
-                    item.SubItems.Add(reader.GetString(7));
-                    item.SubItems.Add(reader.GetDateTime(8) + "");
-                    item.SubItems.Add(reader.GetString(9));
                     lsv_tiemKiem.Items.Add(item);
                 }
                 reader.Close();
@@ -91,7 +89,7 @@ namespace QuanLyBanGiay
                 connect_data();
                 SqlCommand command = new SqlCommand();
                 command.CommandType = CommandType.Text;
-                string sql_str = "delete from BanGiay where Stt = " + index;
+                string sql_str = "delete from DataGiay where Stt = " + index;
                 command.CommandText = sql_str;
                 command.Connection = conn;
 
@@ -116,6 +114,17 @@ namespace QuanLyBanGiay
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (lsv_tiemKiem.SelectedItems.Count > 0)
+            {
+                ListViewItem item = lsv_tiemKiem.SelectedItems[0];
+                int stt = int.Parse(item.SubItems[0].Text);
+                frm_xuatHang frm_xuatHang = new frm_xuatHang(stt);
+                frm_xuatHang.ShowDialog(this);
+            }
         }
     }
 }

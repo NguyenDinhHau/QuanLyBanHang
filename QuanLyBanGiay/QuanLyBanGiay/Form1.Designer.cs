@@ -43,8 +43,9 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -52,49 +53,52 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btn_xuatFile);
             this.groupBox1.Controls.Add(this.btn_xoa);
             this.groupBox1.Controls.Add(this.btn_tiemKiem);
             this.groupBox1.Controls.Add(this.btn_them);
-            this.groupBox1.Location = new System.Drawing.Point(12, 24);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1091, 98);
+            this.groupBox1.Size = new System.Drawing.Size(1091, 76);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tác Vụ";
             // 
             // btn_xuatFile
             // 
-            this.btn_xuatFile.Location = new System.Drawing.Point(931, 30);
+            this.btn_xuatFile.Location = new System.Drawing.Point(933, 14);
             this.btn_xuatFile.Name = "btn_xuatFile";
             this.btn_xuatFile.Size = new System.Drawing.Size(154, 41);
-            this.btn_xuatFile.TabIndex = 0;
+            this.btn_xuatFile.TabIndex = 5;
             this.btn_xuatFile.Text = "Xuất File";
             this.btn_xuatFile.UseVisualStyleBackColor = true;
+            this.btn_xuatFile.Click += new System.EventHandler(this.btn_xuatFile_Click);
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(416, 34);
+            this.btn_xoa.Location = new System.Drawing.Point(517, 19);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(147, 39);
-            this.btn_xoa.TabIndex = 0;
+            this.btn_xoa.TabIndex = 3;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_tiemKiem
             // 
-            this.btn_tiemKiem.Location = new System.Drawing.Point(217, 34);
+            this.btn_tiemKiem.Location = new System.Drawing.Point(186, 19);
             this.btn_tiemKiem.Name = "btn_tiemKiem";
             this.btn_tiemKiem.Size = new System.Drawing.Size(147, 39);
-            this.btn_tiemKiem.TabIndex = 0;
+            this.btn_tiemKiem.TabIndex = 1;
             this.btn_tiemKiem.Text = "Tìm Kiếm";
             this.btn_tiemKiem.UseVisualStyleBackColor = true;
             this.btn_tiemKiem.Click += new System.EventHandler(this.btn_tiemKiem_Click);
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(21, 34);
+            this.btn_them.Location = new System.Drawing.Point(23, 18);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(139, 40);
             this.btn_them.TabIndex = 0;
@@ -105,7 +109,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lsv_data);
-            this.groupBox2.Location = new System.Drawing.Point(12, 128);
+            this.groupBox2.Location = new System.Drawing.Point(12, 94);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1094, 536);
             this.groupBox2.TabIndex = 1;
@@ -122,9 +126,7 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
+            this.columnHeader8});
             this.lsv_data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsv_data.FullRowSelect = true;
             this.lsv_data.GridLines = true;
@@ -140,7 +142,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Stt";
-            this.columnHeader1.Width = 59;
+            this.columnHeader1.Width = 80;
             // 
             // columnHeader2
             // 
@@ -149,13 +151,13 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Tên Giày";
+            this.columnHeader3.Text = "Model";
             this.columnHeader3.Width = 107;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Màu Giày";
-            this.columnHeader4.Width = 99;
+            this.columnHeader4.Width = 124;
             // 
             // columnHeader5
             // 
@@ -164,35 +166,56 @@
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Thể Loại";
-            this.columnHeader6.Width = 128;
+            this.columnHeader6.Text = "Ghi Chú";
+            this.columnHeader6.Width = 295;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Vị Trí";
-            this.columnHeader7.Width = 76;
+            this.columnHeader7.Width = 114;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Giá Bán";
-            this.columnHeader8.Width = 111;
+            this.columnHeader8.Width = 136;
             // 
-            // columnHeader9
+            // button1
             // 
-            this.columnHeader9.Text = "Ngày Bán";
-            this.columnHeader9.Width = 113;
+            this.button1.Location = new System.Drawing.Point(349, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 39);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Xuất Hàng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // columnHeader10
+            // button2
             // 
-            this.columnHeader10.Text = "Người Bán";
-            this.columnHeader10.Width = 179;
+            this.button2.Location = new System.Drawing.Point(804, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 41);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Lịch Sử";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(936, 636);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(167, 37);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Cập Nhật Dữ Liệu";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1118, 676);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1118, 685);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -222,10 +245,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Button btn_xoa;
         public System.Windows.Forms.ListView lsv_data;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }
 

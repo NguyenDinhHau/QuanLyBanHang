@@ -38,8 +38,6 @@
             this.ud_img_1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTime_ud = new System.Windows.Forms.DateTimePicker();
-            this.txt_ud_nguoiBan = new System.Windows.Forms.TextBox();
             this.txt_ud_size = new System.Windows.Forms.TextBox();
             this.txt_ud_viTri = new System.Windows.Forms.TextBox();
             this.txt_ud_mauGiay = new System.Windows.Forms.TextBox();
@@ -48,9 +46,7 @@
             this.txt_ud_tenGiay = new System.Windows.Forms.TextBox();
             this.cmb_ud_hangGiay = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -157,8 +153,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTime_ud);
-            this.groupBox1.Controls.Add(this.txt_ud_nguoiBan);
+            this.groupBox1.BackColor = System.Drawing.Color.PeachPuff;
             this.groupBox1.Controls.Add(this.txt_ud_size);
             this.groupBox1.Controls.Add(this.txt_ud_viTri);
             this.groupBox1.Controls.Add(this.txt_ud_mauGiay);
@@ -167,9 +162,7 @@
             this.groupBox1.Controls.Add(this.txt_ud_tenGiay);
             this.groupBox1.Controls.Add(this.cmb_ud_hangGiay);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label3);
@@ -181,23 +174,7 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Giày";
-            // 
-            // dateTime_ud
-            // 
-            this.dateTime_ud.CustomFormat = "dd/MM/yyyy";
-            this.dateTime_ud.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTime_ud.Location = new System.Drawing.Point(586, 89);
-            this.dateTime_ud.Name = "dateTime_ud";
-            this.dateTime_ud.Size = new System.Drawing.Size(122, 20);
-            this.dateTime_ud.TabIndex = 9;
-            // 
-            // txt_ud_nguoiBan
-            // 
-            this.txt_ud_nguoiBan.Location = new System.Drawing.Point(585, 147);
-            this.txt_ud_nguoiBan.Multiline = true;
-            this.txt_ud_nguoiBan.Name = "txt_ud_nguoiBan";
-            this.txt_ud_nguoiBan.Size = new System.Drawing.Size(161, 30);
-            this.txt_ud_nguoiBan.TabIndex = 10;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // txt_ud_size
             // 
@@ -225,19 +202,19 @@
             // 
             // txt_ud_giaBan
             // 
-            this.txt_ud_giaBan.Location = new System.Drawing.Point(585, 24);
+            this.txt_ud_giaBan.Location = new System.Drawing.Point(350, 89);
             this.txt_ud_giaBan.Multiline = true;
             this.txt_ud_giaBan.Name = "txt_ud_giaBan";
             this.txt_ud_giaBan.Size = new System.Drawing.Size(123, 30);
-            this.txt_ud_giaBan.TabIndex = 8;
+            this.txt_ud_giaBan.TabIndex = 6;
             // 
             // txt_ud_loaiGiay
             // 
-            this.txt_ud_loaiGiay.Location = new System.Drawing.Point(350, 89);
+            this.txt_ud_loaiGiay.Location = new System.Drawing.Point(549, 24);
             this.txt_ud_loaiGiay.Multiline = true;
             this.txt_ud_loaiGiay.Name = "txt_ud_loaiGiay";
-            this.txt_ud_loaiGiay.Size = new System.Drawing.Size(135, 30);
-            this.txt_ud_loaiGiay.TabIndex = 6;
+            this.txt_ud_loaiGiay.Size = new System.Drawing.Size(198, 153);
+            this.txt_ud_loaiGiay.TabIndex = 8;
             // 
             // txt_ud_tenGiay
             // 
@@ -264,15 +241,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Size";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(525, 159);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Người Bán";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -282,28 +250,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Hãng Giày";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(525, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Ngày Bán";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 97);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Tên Giày";
+            this.label2.Text = "Model";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(525, 33);
+            this.label7.Location = new System.Drawing.Point(290, 98);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 0;
@@ -330,24 +289,26 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(293, 97);
+            this.label5.Location = new System.Drawing.Point(492, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Loại Giày";
+            this.label5.Text = "Ghi Chú";
             // 
             // frm_update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(812, 649);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ud_btn_thoat);
             this.Controls.Add(this.ud_btn_luuDuLieu);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
             this.Name = "frm_update";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UpdateData";
+            this.Text = "Sửa dữ liệu";
             this.Load += new System.EventHandler(this.frm_update_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ud_img_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ud_img_2)).EndInit();
@@ -367,8 +328,6 @@
         private System.Windows.Forms.Button ud_btn_hinh1;
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTime_ud;
-        private System.Windows.Forms.TextBox txt_ud_nguoiBan;
         private System.Windows.Forms.TextBox txt_ud_size;
         private System.Windows.Forms.TextBox txt_ud_viTri;
         private System.Windows.Forms.TextBox txt_ud_mauGiay;
@@ -377,9 +336,7 @@
         private System.Windows.Forms.TextBox txt_ud_tenGiay;
         public System.Windows.Forms.ComboBox cmb_ud_hangGiay;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
